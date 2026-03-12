@@ -1,0 +1,81 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse; /* Removes the double-border look and gaps */
+  border: none; /* Removes the outer border */
+  margin: auto;
+}
+
+th {
+  background-color: lightgray;
+  padding: 5px;
+}
+
+td {
+  padding: 3px 5px;
+  text-align: center;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(to right, lime, green)
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(to right, yellow, orange)
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(to right, orange, #ff9500, #ff5500 )
+}
+
+span {
+ display: inline-block;
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid black;
+  border-radius: 25px;
+  background-image: linear-gradient(lime, green);
+}
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid black;
+  border-radius: 25px;
+  background-image: linear-gradient( gray, lightgray);
+}
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid black;
+  border-radius: 25px;
+  background-image: linear-gradient(gray, yellow);
+}
+
+span[class="status"], span[class^="rate"]  {
+  height: 30px;
+  width: 100px;
+  padding: 5px;
+}
+
+span[class^="rate"] > span {
+  border: 1px solid #655A5A;
+  border-radius: 50px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  padding: 1px;
+  margin: 1px;
+}
+
+span[class~="one"] span:first-child {
+  background-image: linear-gradient(to right, yellow, orange);
+} 
+
+span[class~="two"] span:nth-of-type(-n+2) {
+  background-image: linear-gradient(to right, yellow, orange);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to right, yellow, orange);
+}
