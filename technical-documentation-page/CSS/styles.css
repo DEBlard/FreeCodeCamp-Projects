@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Nunito:ital@0;1&display=swap');
+
+/* || RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/* UTILITY CLASSES */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* || GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 1.2rem "Nunito", sans-serif;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #cbd5e1;
+    height: 10%;
+    border-radius: 5px;
+}
+
+nav .nav-header {
+    position: sticky;
+    top: 0;
+    font-size: 1rem;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+    padding: 0.1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+    overflow: scroll;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: #000;
+    border: 1px solid #777676;
+}
+
+#main-doc {
+    background-color: #e0e6ed;
+    padding: 0.5rem;
+}
+h2 {
+    text-decoration: underline;
+}
+.main-section p {
+    padding: 0.5rem;
+}
+
+code {
+    display: block;
+    font: 0.9rem "Datatype", monospace, "Nunito", sans-serif;
+    margin: 1rem;
+    text-align: center; 
+}
+
+#components ul {
+    padding: 0.5rem 2.5rem;
+}
+
+h3 {
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+footer {
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+    bottom: 0;
+}
+
+/* || MEDIA QUERIES (TABLET LANDSCAPE) */
+@media screen and (min-width: 992px) {
+        .flex-body {
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: row;
+        } 
+
+        nav {
+            width: min(calc(33% - 0.25rem), 500px);
+            height: 100vh;
+            border-radius: 0;
+            position: sticky;
+            left: 0;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .nav-link {
+            padding: 1.5rem 1rem;
+        }
+
+        code {
+            font-size: 1.2rem;
+        }
+      
+}
+
+/* || EXTRA-LARGE (DESKTOP) */
+@media screen and (min-width: 1440px) {
+        .flex-body {
+            font-size: 2.5rem;
+            display: flex;
+            flex-direction: row;
+        } 
+
+        nav {
+            width: min(calc(33% - 1rem), 600px);
+            height: 100vh;
+            position: sticky;
+            left: 0;
+            top: 0;
+            font-size: 2.5rem;
+        }
+
+        nav .nav-header {
+            position: static;
+            font-size: 1.5rem;
+            background-color: #1e293b;
+            color: whitesmoke;
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+
+        .nav-link {
+            padding: 2rem 1rem;
+        }
+
+        code {
+            font-size: 2rem;
+        }
+      
+}
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+        .flex-body {
+                display: flex;
+                flex-direction: row;
+                font-size: 1rem;
+            } 
+
+        nav {
+            width: min(calc(33% - 1rem), 400px);
+            height: 100vh;
+            position: sticky;
+            left: 0;
+            top: 0;
+        }
+
+        nav .nav-header {
+            position: static;
+            background-color: #1e293b;
+            color: whitesmoke;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.5rem;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
+        }
+}
